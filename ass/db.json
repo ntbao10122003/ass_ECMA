@@ -1,0 +1,26 @@
+{
+  "projects": [
+    {
+      "id": 12,
+      "name": "dự án tốt nghiệp ",
+      "desc": "Học code cho người mới bắt đầu: Code là gì? Để bắt đầu học code thì chúng ta cần phải biết định nghĩa coding là gì. Code hay còn gọi mã nguồn là một thuật ngữ dùng để mô tả những câu lệnh được viết bằng giao thức của một ngôn ngữ cụ thể. Một số ngôn ngữ phổ biến hiện nay:",
+      "link": "https://github.com/ntbao10122003/es6",
+      "author": "dự án tốt nghiệp "
+    },
+    {
+      "name": "dự án tốt nghiệp ",
+      "desc": "Học code cho người mới bắt đầu: Code là gì? Để bắt đầu học code thì chúng ta cần phải biết định nghĩa coding là gì. Code hay còn gọi mã nguồn là một thuật ngữ dùng để mô tả những câu lệnh được viết bằng giao thức của một ngôn ngữ cụ thể. Một số ngôn ngữ phổ biến hiện nay:",
+      "link": "https://github.com/ntbao10122003/es6",
+      "author": "14123",
+      "id": 13
+    }
+  ],
+  "contact": [
+    {
+      "name": "nguyễn thế Huy",
+      "id": 4,
+      "author": "nguyenthehuy@gmail.com",
+      "sdt": "0988252613"
+    }
+  ]
+}
