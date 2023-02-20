@@ -18,43 +18,33 @@ const Projects = () => {
     }, []);
 
   return `
-  
- 
-            ${projects.map((project,index) => {
-
-                return`
-                <section id="projects">
+  <section id="projects">
                 <div class="projects container">
                     <div class="projects-header">
                 </div>
-        
+ 
+            ${projects.map((project,index) => {
+
+            return`
                 <div class="all-projects">
-                <div class="project-item">
-                <div class="project-info">
-                <h1>${project.name}</h1>
-                <h2>${project.author}</h2>
-                <p>${project.desc}</p>
-                <a href="" style = "color : white ;"> link githud :  ${project.link}</a>
+                    <div class="project-item">
+                    <div class="project-info">
+                    <h1>${project.name}</h1>
+                    <h2>${project.author}</h2>
+                    <p>${project.desc}</p>
+                    <a href="" style = "color : white ;"> link githud :  ${project.link}</a>
+                    </div>
+                    <div class="project-img">
+                    <img src="${project.img}" alt="img">
+                    </div>
                 </div>
-                <div class="project-img">
-                <img src="./img/dachinh.jpg" alt="img">
-                </div>
-            </div>
-
-    </div>
-
-
-    </div>
-</section>
-
-                
-                
                 ` 
             })}
-                    
-  
+
+            </div>
+            </div>
+</section>
   `
-  
 }
 
 export default Projects

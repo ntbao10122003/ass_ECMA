@@ -3,8 +3,6 @@ import instance from "./config";
 const getContact = () => {
     return instance.get(`/Contact`);
 };
-
-
 const addContact = (Contact) => {
     return instance.post(`/Contact`, Contact);
 };

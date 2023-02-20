@@ -1,15 +1,15 @@
-import { deleteProject, getProjects } from "../api/project";
-import { useEffect, useState } from "../lib";
+import { deleteServices, getServices } from "../../api/services";
+import { useEffect, useState } from "../../lib";
 import axios from "axios";
 
-const AdminProjectsPage = () => {
+const AdminServicesList = () => {
     // localStorage
     const [projects, setProjects] = useState([]);
 
     useEffect(() => {
         (async () => {
             try {
-                setProjects(await getProjects());
+                setProjects(await getServices());
             } catch (error) {
                 console.log(error);
             }
@@ -23,8 +23,8 @@ const AdminProjectsPage = () => {
                 try {
                     const id = this.dataset.id;
 
-                    deleteProject(id).then(() => {
-                        const newProjects = projects.filter((project) => project.id != id);
+                    deleteServices(id).then(() => {
+                        const newProjects = projects.filter((service) => service.id != id);
                         setProjects(newProjects);
                     });
                 } catch (error) {
@@ -56,14 +56,14 @@ const AdminProjectsPage = () => {
                             <td>${index + 1}</td>
                             <td>${project.name}</td>
                             <td>${project.desc}</td>
-                            <td>${project.link}</td>
-                            <td><img src = "${project.img}"}></td>
+                            <td>${project.sdt}</td>
+                            <td></td>
                             <td>${project.author}</td>
                             <td>
                                 <button data-name="Vu" data-id="${
                                     project.id
                                 }"class="btn btn-danger btn-remove">Xóa</button>
-                                <a href="/admin/projects/${project.id}/edit">Sửa</a>
+                                <a href="/admin/servicesList/${project.id}/edit">Sửa</a>
                             </td>
                         </tr>
                     `;
@@ -81,4 +81,4 @@ const AdminProjectsPage = () => {
 
 };
 
-export default AdminProjectsPage;
+export default AdminServicesList;

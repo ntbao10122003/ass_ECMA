@@ -1,6 +1,6 @@
 import { getProject, updateProject } from "../api/project";
 import { useEffect, router, useState } from "../lib";
-
+import axios from "axios";
 const AdminProjectEditPage = ({ id }) => {
     const [project, setProject] = useState({});
     useEffect(() => {
@@ -13,29 +13,62 @@ const AdminProjectEditPage = ({ id }) => {
         })();
     }, []);
     useEffect(() => {
-        const form = document.getElementById("form-edit");
-        const projectName = document.getElementById("project-name");
+        const form = document.querySelector("#form-edit");
+        const projectName = document.querySelector("#project-name");
+        const projectAuthor = document.querySelector("#project-author");
         const projectDesc = document.querySelector("#project-desc");
         const projectLink = document.querySelector("#project-link");
-        const projectAuthor = document.getElementById("project-author");
+        const projectImg = document.querySelector("#project-images");
+        
 
-        form.addEventListener("submit", async (e) => {
+        form.addEventListener("submit", async function (e) {
             e.preventDefault();
 
-            try {
-                const formData = {
-                    id,
-                    name: projectName.value,
-                    desc: projectDesc.value,
-                    link: projectLink.value,
-                    author: projectAuthor.value,
-                };
-                await updateProject(formData);
-                router.navigate("/admin/projects");
-            } catch (error) {
-                console.log(error);
+            const urls = await uploadFiles(projectImg.files);
+        try{
+            // Tạo proejct mới
+            const formData = {
+                id,
+                name: projectName.value,
+                author: projectAuthor.value,
+                link: projectLink.value,
+                desc: projectDesc.value,
+                img: urls,
+
+            };
+
+            await updateProject(formData);
+            router.navigate("/admin/projects");
+        }catch (error) {
+            console.log(error); 
+        } 
+    });
+        
+        const uploadFiles = async (files) => {
+            if(files){
+                const CLOUD_NAME ="devcitufs";
+                const PRESET_NAME ="baontph21353";
+                const FOLDER_NAME = "mikami";
+                const urls = [];
+                const api = `https://api.cloudinary.com/v1_1/${CLOUD_NAME}/image/upload`;
+    
+                const formData = new FormData();
+                formData.append("upload_preset", PRESET_NAME);
+                formData.append("folder", FOLDER_NAME);
+    
+                for(const file of files){
+                    formData.append("file", file);
+                    const response = await axios.post(api, formData,{
+                        headers: {
+                            "Content-Type": "multipart/form-data",
+                        }
+                    });
+                    urls.push(response.data.secure_url);
+                }
+                return urls;
             }
-        });
+
+        }
     });
     return `<div>
         <div class="container pt-5">
@@ -55,7 +88,7 @@ const AdminProjectEditPage = ({ id }) => {
             </div>
             <div class="form-group">
                 <label for="" class="form-label">Hình ảnh</label>
-                <input type="file" multiple class="form-control" id="project-images" />
+                <input type="file" multiple class="form-control" id="project-images" value="${project.img}"/>
             </div>
                 <div class="form-group">
                     <label for="" class="form-label">Tác giả</label>
