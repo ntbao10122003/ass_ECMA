@@ -1,18 +1,18 @@
 import instance from "./config";
 
 const getServices = () => {
-    return instance.get(`/servicesList`);
+    return instance.get(`/services`);
 };
 const getService = (id) => {
-    return instance.get(`/servicesList/${id}`);
+    return instance.get(`/services/${id}`);
 };
 const addServices = (Service) => {
-    return instance.post(`/servicesList`, Service);
+    return instance.post(`/services`, Service);
 };
 const deleteServices = (id) => {
-    return instance.delete(`/servicesList/${id}`);
+    return instance.delete(`/services/${id}`);
 };
 const updateServices = (Service) => {
-    return instance.put(`/servicesList/${Service.id}`, Service);
+    return instance.put(`/services/${Service.id}`, Service);
 };
 export { getServices, getService, addServices, deleteServices, updateServices };

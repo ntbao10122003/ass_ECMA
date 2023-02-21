@@ -1,12 +1,24 @@
 {
   "projects": [
     {
-      "id": 13,
-      "name": "dự án tốt nghiệp 2",
+      "id": 15,
+      "name": "dự án mới ",
+      "author": "nguyễn thế bảoo",
+      "link": "https://github.com/ntbao10122003/es6",
+      "desc": "Học code cho người mới bắt đầu: Code là gì? Để bắt đầu học code thì chúng ta cần phải biết định nghĩa coding là gì. Code hay còn gọi mã nguồn là một thuật ngữ dùng để mô tả những câu lệnh được viết bằng giao thức của một ngôn ngữ cụ thể. Một số ngôn ngữ phổ biến hiện nay:",
+      "img": [
+        "https://res.cloudinary.com/devcitufs/image/upload/v1676952073/mikami/u4urckar8dpfceg5kpbk.jpg"
+      ]
+    },
+    {
+      "name": "dự án tốt nghiệp ",
       "author": "dự án tốt nghiệp ",
       "link": "https://github.com/ntbao10122003/es6",
       "desc": "Học code cho người mới bắt đầu: Code là gì? Để bắt đầu học code thì chúng ta cần phải biết định nghĩa coding là gì. Code hay còn gọi mã nguồn là một thuật ngữ dùng để mô tả những câu lệnh được viết bằng giao thức của một ngôn ngữ cụ thể. Một số ngôn ngữ phổ biến hiện nay:",
-      "img": []
+      "img": [
+        "https://res.cloudinary.com/devcitufs/image/upload/v1676938514/mikami/iavmfx403do1rf6taxt3.jpg"
+      ],
+      "id": 17
     }
   ],
   "contact": [
@@ -16,6 +28,27 @@
       "author": "nguyenthehuy@gmail.com",
       "sdt": "0988252613"
     }
+  ],
+  "services": [
+    {
+      "name": "Nguyễn Thế Bảo",
+      "desc": "Học code cho người mới bắt đầu: Code là gì? Để bắt đầu học code thì chúng ta cần phải biết định nghĩa coding là gì. Code hay còn gọi mã nguồn là một thuật ngữ dùng để mô tả những câu lệnh được viết bằng giao thức của một ngôn ngữ cụ thể. Một số ngôn ngữ phổ biến hiện nay:",
+      "id": 3
+    },
+    {
+      "name": "Nguyễn Thế Bảo",
+      "desc": "Học code cho người mới bắt đầu: Code là gì? Để bắt đầu học code thì chúng ta cần phải biết định nghĩa coding là gì. Code hay còn gọi mã nguồn là một thuật ngữ dùng để mô tả những câu lệnh được viết bằng giao thức của một ngôn ngữ cụ thể. Một số ngôn ngữ phổ biến hiện nay:",
+      "id": 3
+    },
+    {
+      "name": "Nguyễn Thế Bảo",
+      "desc": "Học code cho người mới bắt đầu: Code là gì? Để bắt đầu học code thì chúng ta cần phải biết định nghĩa coding là gì. Code hay còn gọi mã nguồn là một thuật ngữ dùng để mô tả những câu lệnh được viết bằng giao thức của một ngôn ngữ cụ thể. Một số ngôn ngữ phổ biến hiện nay:",
+      "id": 3
+    },
+    {
+      "name": "Nguyễn Thế Bảo",
+      "desc": "Học code cho người mới bắt đầu: Code là gì? Để bắt đầu học code thì chúng ta cần phải biết định nghĩa coding là gì. Code hay còn gọi mã nguồn là một thuật ngữ dùng để mô tả những câu lệnh được viết bằng giao thức của một ngôn ngữ cụ thể. Một số ngôn ngữ phổ biến hiện nay:",
+      "id": 3
+    }
   ]
-  
 }

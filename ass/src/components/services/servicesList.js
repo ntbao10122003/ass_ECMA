@@ -42,9 +42,6 @@ const AdminServicesList = () => {
                     <th>#</th>
                     <th>Tên dự án</th>
                     <th>Mô tả</th>
-                    <th>Link Github</th>
-                    <th>Hình ảnh</th>
-                    <th>Tác giả</th>
                     <th></th>
                 </tr>
             </thead>
@@ -56,14 +53,11 @@ const AdminServicesList = () => {
                             <td>${index + 1}</td>
                             <td>${project.name}</td>
                             <td>${project.desc}</td>
-                            <td>${project.sdt}</td>
-                            <td></td>
-                            <td>${project.author}</td>
                             <td>
-                                <button data-name="Vu" data-id="${
+                                <button data-name="Bao" data-id="${
                                     project.id
                                 }"class="btn btn-danger btn-remove">Xóa</button>
-                                <a href="/admin/servicesList/${project.id}/edit">Sửa</a>
+                                <a href="/AdminServicesList/${project.id}/edit">Sửa</a>
                             </td>
                         </tr>
                     `;

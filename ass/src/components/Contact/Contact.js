@@ -1,6 +1,7 @@
 import { getContact } from "../../api/contact";
 import { useEffect, useState } from "../../lib";
 import axios from "axios";
+import Header from "../Header";
 
 const Contact = () => {
 
@@ -22,6 +23,7 @@ const Contact = () => {
 
 
   return `
+  ${Header()}
     <section id="contact">
     <div class="contact container">
       <div>

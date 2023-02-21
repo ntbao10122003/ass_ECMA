@@ -71,6 +71,7 @@ const AdminProjectEditPage = ({ id }) => {
         }
     });
     return `<div>
+    
         <div class="container pt-5">
         <h1>Sửa dự án</h1>
             <form action="" id="form-edit">

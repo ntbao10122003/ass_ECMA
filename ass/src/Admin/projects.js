@@ -34,7 +34,10 @@ const AdminProjectsPage = () => {
         }
     });
 
-    return `<div class="container pt-5">
+    return `
+  <a href="allAdmin" style = "font-size:24px; margin-left:30px; color : black; ">back</a> 
+    
+    <div class="container pt-5">
     <h1>Quản lý dự án</h1>
     <table class="table table-bordered">
             <thead>
@@ -60,7 +63,7 @@ const AdminProjectsPage = () => {
                             <td><img src = "${project.img}"}></td>
                             <td>${project.author}</td>
                             <td>
-                                <button data-name="Vu" data-id="${
+                                <button data-name="bao" data-id="${
                                     project.id
                                 }"class="btn btn-danger btn-remove">Xóa</button>
                                 <a href="/admin/projects/${project.id}/edit">Sửa</a>

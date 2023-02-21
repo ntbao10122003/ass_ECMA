@@ -695,7 +695,7 @@ p {
 	/* End header */
 
 	#services .service-bottom .service-item {
-		flex-basis: 22%;
+		flex-basis: 20%;
 		margin: 1.5%;
 	}
 }

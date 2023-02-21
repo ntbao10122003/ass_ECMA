@@ -1,7 +1,7 @@
 import { deleteProject, getProjects } from "../api/project";
 import { useEffect, useState } from "../lib";
 import axios from "axios";
-
+import Header from "./Header";
 const Projects = () => {
 
 
@@ -18,6 +18,7 @@ const Projects = () => {
     }, []);
 
   return `
+  ${Header()}
   <section id="projects">
                 <div class="projects container">
                     <div class="projects-header">

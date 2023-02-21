@@ -18,9 +18,9 @@ const Header = () => {
                             <ul>
                                     <li><a href="#home" data-after="Home">Home</a></li>
                                     <li><a href="#services" data-after="Service">Services</a></li>
-                                    <li><a href="#projects" data-after="Projects">Projects</a></li>
+                                    <li><a href="/Projects" data-after="Projects">Projects</a></li>
                                     <li><a href="#about" data-after="About">About</a></li>
-                                    <li><a href="Contact.js" data-after="Contact">Contact</a></li>
+                                    <li><a href="/Contact" data-after="Contact">Contact</a></li>
                             </ul>
                     </div>
                 </div>
