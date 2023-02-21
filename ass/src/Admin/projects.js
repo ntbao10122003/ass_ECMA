@@ -1,6 +1,8 @@
 import { deleteProject, getProjects } from "../api/project";
 import { useEffect, useState } from "../lib";
 import axios from "axios";
+import Header from "../components/Header";
+import headerAdmin from "./headerAdmin";
 
 const AdminProjectsPage = () => {
     // localStorage
@@ -35,11 +37,25 @@ const AdminProjectsPage = () => {
     });
 
     return `
-  <a href="allAdmin" style = "font-size:24px; margin-left:30px; color : black; ">back</a> 
-    
+    ${headerAdmin()}
+
     <div class="container pt-5">
-    <h1>Quản lý dự án</h1>
-    <table class="table table-bordered">
+    <style>
+    .btn-addPr{
+        margin: 0 75px;
+        width: 150px;
+        height: 30px;	
+        background : gold ;
+    }
+    .btn-addPr a{
+        color: black;
+        font-weight: bold;
+        font-size: 15px;
+    }
+    
+    </style>
+    <button class="btn-addPr"><a href="/admin/projectsAdd">Thêm dự án</a></button>
+    <table style="padding-top:50px;" class="table table-bordered">
             <thead>
                 <tr>
                     <th>#</th>
@@ -60,7 +76,7 @@ const AdminProjectsPage = () => {
                             <td>${project.name}</td>
                             <td>${project.desc}</td>
                             <td>${project.link}</td>
-                            <td><img src = "${project.img}"}></td>
+                            <td style=" width:150px;height:150px;"><img  src = "${project.img}"}></td>
                             <td>${project.author}</td>
                             <td>
                                 <button data-name="bao" data-id="${

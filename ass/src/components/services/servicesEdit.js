@@ -1,15 +1,15 @@
 
-import { getServices, updateServices } from "../../api/services";
+import { getService, updateServices } from "../../api/services";
 import { useEffect, router, useState } from "../../lib";
 import axios from "axios";
 
 
-const servicesEdit = () => {
+const servicesEdit = ({id}) => {
     const [project, setProject] = useState({});
     useEffect(() => {
         (async () => {
             try {
-                setProject(await getServices(id));
+                setProject(await getService(id));
             } catch (error) {
                 console.log(error);
             }
@@ -25,9 +25,9 @@ const servicesEdit = () => {
 
             try {
                 const formData = {
-                    id,
-                    name: projectName.value,
-                    desc: projectDesc.value,
+                   id,
+                   name : projectName.value,
+                   desc : projectDesc.value,
                 };
                 await updateServices(formData);
                 router.navigate("/AdminServicesList");

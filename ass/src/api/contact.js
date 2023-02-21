@@ -1,6 +1,8 @@
 import instance from "./config";
-
-const getContact = () => {
+const getContact = (id) => {
+    return instance.get(`/Contact/${id}`);
+};
+const getContacts = () => {
     return instance.get(`/Contact`);
 };
 const addContact = (Contact) => {
@@ -12,4 +14,4 @@ const deleteContact = (id) => {
 const updateContact = (Contact) => {
     return instance.put(`/Contact/${Contact.id}`, Contact);
 };
-export { getContact, addContact, deleteContact, updateContact };
+export {getContacts, getContact, addContact, deleteContact, updateContact };

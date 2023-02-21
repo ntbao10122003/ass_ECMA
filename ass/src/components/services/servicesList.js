@@ -1,6 +1,7 @@
 import { deleteServices, getServices } from "../../api/services";
 import { useEffect, useState } from "../../lib";
 import axios from "axios";
+import headerAdmin from "../../Admin/headerAdmin";
 
 const AdminServicesList = () => {
     // localStorage
@@ -34,8 +35,26 @@ const AdminServicesList = () => {
         }
     });
 
-    return `<div class="container pt-5">
-    <h1>Quản lý dự án</h1>
+    return `
+    ${headerAdmin()}
+
+    <div class="container pt-5">
+
+    <style>
+    .btn-addPr{
+        margin: 0 75px;
+        width: 150px;
+        height: 30px;	
+        background : gold ;
+    }
+    .btn-addPr a{
+        color: black;
+        font-weight: bold;
+        font-size: 15px;
+    }
+    
+    </style>
+    <button class="btn-addPr"><a href="/AdminServicesAdd">Thêm dự án</a></button>
     <table class="table table-bordered">
             <thead>
                 <tr>
@@ -57,7 +76,7 @@ const AdminServicesList = () => {
                                 <button data-name="Bao" data-id="${
                                     project.id
                                 }"class="btn btn-danger btn-remove">Xóa</button>
-                                <a href="/AdminServicesList/${project.id}/edit">Sửa</a>
+                                <a href="/AdminServicesEdit/${project.id}/edit">Sửa</a>
                             </td>
                         </tr>
                     `;
