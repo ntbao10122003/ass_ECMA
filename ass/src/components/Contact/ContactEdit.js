@@ -5,7 +5,7 @@ import axios from "axios";
 
 
 
-const ContactEdit = () => {
+const ContactEdit = ({id}) => {
 
     const [project, setProject] = useState({});
     useEffect(() => {
@@ -21,22 +21,22 @@ const ContactEdit = () => {
 
     useEffect(() => {
         const form = document.getElementById("form-edit");
-        const projectName = document.getElementById("project-name");
-        const projectAuthor = document.getElementById("project-author");
-        const projectsdt = document.getElementById("project-sdt");
+        const projectName = document.querySelector("#project-name");
+        const projectAuthor = document.querySelector("#project-author"); 
+        const projectPhone = document.querySelector("#project-phone");  
 
-        form.addEventListener("submit", async (e) => {
+
+        form.addEventListener("submit", async function (e) {
             e.preventDefault();
-
             try {
                 const formData = {
-                    id:id,
+                    id,
                     name: projectName.value,
                     author: projectAuthor.value,
-                    sdt:projectsdt.value,
+                    phone :projectPhone.value,
                 };
                 await updateContact(formData);
-                router.navigate("Contact");
+                router.navigate("/ContactList");
             } catch (error) {
                 console.log(error);
             }
@@ -60,7 +60,7 @@ const ContactEdit = () => {
                                     </div>
                                     <div class="form-group">
                                     <label for="" class="form-label">số điện thoại </label>
-                                    <input type="text" class="form-control" id="project-sdt" value="${project.sdt}" />
+                                    <input type="text" class="form-control" id="project-phone" value="${project.phone}" />
                                 </div>
 
                                 <button class="btn btn-primary">Thêm dự án</button>

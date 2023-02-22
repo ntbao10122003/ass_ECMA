@@ -51,7 +51,7 @@ const ContactList = () => {
     }
     
     </style>
-    <button class="btn-addPr"><a href="/AdminServicesAdd">Thêm dự án</a></button>
+    <button class="btn-addPr"><a href="/ContactAdd">Thêm dự án</a></button>
     <table class="table table-bordered">
             <thead>
                 <tr>
@@ -69,14 +69,14 @@ const ContactList = () => {
                         <tr>
                             <td>${index + 1}</td>
                             <td>${contact.name}</td>
-                            <td>${contact.sdt}</td>
+                            <td>${contact.phone}</td>
                             <td>${contact.author}</td>
 
                             <td>
                                 <button data-name="Bao" data-id="${
                                     contact.id
                                 }"class="btn btn-danger btn-remove">Xóa</button>
-                                <a href="/AdminServicesEdit/${contact.id}/edit">Sửa</a>
+                                <a href="/ContactEdit/${contact.id}/edit">Sửa</a>
                             </td>
                         </tr>
                     `;

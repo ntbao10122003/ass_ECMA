@@ -6,7 +6,7 @@ const ContactAdd = () => {
     useEffect(() => {
         const form = document.querySelector("#form-add");
         const contactName = document.querySelector("#contact-name");
-        const contactsdt = document.querySelector("#contact-sdt");
+        const contactphone = document.querySelector("#contact-phone");
         const contactauthor = document.querySelector("#contact-author");
 
         form.addEventListener("submit", async (e) => {
@@ -15,7 +15,7 @@ const ContactAdd = () => {
                 // Tạo proejct mới
                 const formData = {
                     name: contactName.value,
-                    sdt: contactsdt.value,
+                    phone: contactphone.value,
                     author: contactauthor.value,
 
                 };
@@ -37,7 +37,7 @@ const ContactAdd = () => {
         </div>
         <div class="form-group">
             <label for="" class="form-label">số điện thoại</label>
-            <input type="text" class="form-control" id="contact-sdt" />
+            <input type="text" class="form-control" id="contact-phone" />
         </div>
         <div class="form-group">
             <label for="" class="form-label">author</label>

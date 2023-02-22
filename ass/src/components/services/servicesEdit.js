@@ -15,22 +15,24 @@ const servicesEdit = ({id}) => {
             }
         })();
     }, []);
+ 
     useEffect(() => {
         const form = document.getElementById("form-edit");
-        const projectName = document.getElementById("#project-name");
-        const projectDesc = document.querySelector("#project-desc");
+        const projectName = document.querySelector("#project-name");
+        const projectDesc = document.querySelector("#project-desc");  
 
-        form.addEventListener("submit", async function (e)  {
+          form.addEventListener("submit", async function (e) {
             e.preventDefault();
 
-            try {
+            try{
+          
                 const formData = {
-                   id,
-                   name : projectName.value,
-                   desc : projectDesc.value,
+                    id,
+                    name: projectName.value,
+                    desc: projectDesc.value,    
                 };
                 await updateServices(formData);
-                router.navigate("/AdminServicesList");
+            router.navigate("/AdminServicesList");
             } catch (error) {
                 console.log(error);  
             }
@@ -39,25 +41,24 @@ const servicesEdit = ({id}) => {
 
 
     return `<div>
-    <div class="container pt-5">
-    <h1>Sửa dự án</h1>
-        <form action="" id="form-edit">
-            <div class="form-group">
-                <label for="" class="form-label">Tên Dự án</label>
-                <input type="text" class="form-control" id="project-name" value="${project.name}"/>
-            </div>
-            <div class="form-group">
-            <label for="" class="form-label">Mô tả</label>
-            <input type="text" class="form-control" id="project-desc" value="${project.desc}"/>
-        </div>
-            <button class="btn btn-primary">Thêm dự án</button>
-        </form>
-        </div>
-</div>`;
+        <div class="container pt-5">
+        <h1>Sửa dự án</h1>
+            <form action="" id="form-edit">
+                <div class="form-group">
+                    <label for="" class="form-label">Tên Dự án</label>
+                    <input type="text" class="form-control" id="project-name" value="${project.name}" required/>
+                </div>
+               
+                    <div class="form-group">
+                        <label for="" class="form-label">Mô tả</label>
+                        <input type="text" class="form-control" id="project-desc" value="${project.desc}" required/>
+                    </div>                    
+                    <button class="btn btn-primary">Sửa dự án</button>
+                </form>
+                </div>
+        </div>`;
+    };
 
-
-
-}
 
 
 export default servicesEdit
