@@ -1,6 +1,7 @@
 import {  getServices } from "../api/services";
 import { useEffect, useState } from "../lib";
 import axios from "axios";
+import Header from "./Header";
 
 const services = () => {
 
@@ -20,7 +21,7 @@ const services = () => {
 
 
   return `
-  
+  ${Header()}
   <section id="services">
      <div class="services container">
             <div class="service-top">

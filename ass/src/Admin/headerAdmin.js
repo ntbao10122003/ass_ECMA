@@ -2,11 +2,11 @@
 const headerAdmin = () => {
   return `
   <section id="header">
-            <div class="header container">
-                <div class="nav-bar">
+                <div class="header container">
+                        <div class="nav-bar">
                         <div class="brand">
-                                <a href="#hero">
-                                <h1><span>N</span> T<span>B</span></h1>
+                                <a style="text-decoration: none;" href="/home">
+                                <h1><span>H</span><span>OME</span></h1>
                                 </a>
                         </div>
                 <div class="nav-list">
@@ -16,9 +16,8 @@ const headerAdmin = () => {
                             <ul>
                                     <li><a href="/admin/projects" data-after="Home">Home</a></li>
                                     <li><a href="/AdminServicesList" data-after="Service">Services</a></li>
-                                    <li><a href="/Projects" data-after="Projects">Projects</a></li>
-                                    <li><a href="#about" data-after="About">About</a></li>
-                                    <li><a href="/Contact" data-after="Contact">Contact</a></li>
+                                    <li><a href="/admin/projects" data-after="Projects">Projects</a></li>
+                                    <li><a href="/ContactList" data-after="Contact">Contact</a></li>
                             </ul>
                     </div>
                 </div>

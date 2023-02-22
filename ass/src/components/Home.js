@@ -2,7 +2,7 @@ import Banner from './Banner'
 import Header from './Header'
 import services from './services'
 import Projects from './Projects'
-import Contact from './Contact/Contact'
+import Contact from './Contact'
 import Footer from './Footer'
 const Home = () => {
     return `

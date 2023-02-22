@@ -1,16 +1,16 @@
-import { getContact } from "../../api/contact";
-import { useEffect, useState } from "../../lib";
+import { getContacts } from "../api/contact";
+import { useEffect, useState } from "../lib";
 import axios from "axios";
-import Header from "../Header";
+import Header from "./Header";
 
 const Contact = () => {
 
-  const [projects, setProjects] = useState([]);
+  const [contact, setContacts] = useState([]);
 
   useEffect(() => {
       (async () => {
           try {
-              setProjects(await getContact());
+              setContacts(await getContacts());
           } catch (error) {
               console.log(error);
           }
@@ -33,23 +33,23 @@ const Contact = () => {
         <div class="contact-item">
           <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/phone.png" /></div>
     
-          ${projects
-            .map((projects , index) => {
+          ${contact
+            .map((contacts , index) => {
               return `
               <div class="contact-info">
-                  <h1 style="color:red;"> <a href="projects/${projects.id}/edit">số điện thoại </a> </h1>
-                  <h2>${projects.name}</h2>
-                  <h2>${projects.sdt}</h2>
-                  <h2>${projects.author}</h2>
+                  <h1 style="color:red;"> <a style="text-decoration: none;" href="projects/${contacts.id}/edit">số điện thoại </a> </h1>
+                  <h2>${contacts.name}</h2>
+                  <h2>${contacts.sdt}</h2>
+                  <h2>${contacts.author}</h2>
               </div> 
               </div>
 
               <div class="contact-item">
                  <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/new-post.png" /></div>
                     <div class="contact-info">
-                    <h1 style="color:red;"> <a href="projects/${projects.id}/edit">Email </a> </h1>
-                        <h2>${projects.name}</h2>
-                        <h2>${projects.author}</h2>
+                    <h1 style="color:red;"> <a style="text-decoration: none;" href="projects/${contacts.id}/edit">Email </a> </h1>
+                        <h2>${contacts.name}</h2>
+                        <h2>${contacts.author}</h2>
                     </div>
                   </div>
               </div>  

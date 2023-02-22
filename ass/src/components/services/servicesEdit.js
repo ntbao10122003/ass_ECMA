@@ -32,7 +32,7 @@ const servicesEdit = ({id}) => {
                 await updateServices(formData);
                 router.navigate("/AdminServicesList");
             } catch (error) {
-                console.log(error);
+                console.log(error);  
             }
         });
     });
